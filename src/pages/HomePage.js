@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../components/common/Header/Header";
+import Footer from "../components/common/Footer/Footer";
 import Hero from "../components/hero/Hero";
 import Programs from "../components/Programs/Programs";
 import About from "../components/About/About";
@@ -19,6 +20,7 @@ const HomePage = () => {
       <Testimonials />
       <CTA />
       <Contact />
+      <Footer />
     </>
   );
 };

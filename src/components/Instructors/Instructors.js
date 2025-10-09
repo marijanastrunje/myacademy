@@ -1,35 +1,33 @@
 import React from "react";
+import marina from "../../assets/img/marina.JPG";
+import marijana from "../../assets/img/marijana.JPG";
 import "./Instructors.css";
 
 const Instructors = () => {
   const instructors = [
     {
       name: "Marina",
-      title: "Co-Founder & Wine Expert",
-      badge: "Fashion Designer",
-      image:
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80",
+      title: "Co-Founder",
+      image: marina,
       description:
-        "Dolazi iz svijeta mode, diplomirala fashion dizajn. Njezina kreativnost ne poznaje granice – sve što dotakne pretvara u pravu umjetnost. Vrhunska stručnjakinja za silver service s bogatim iskustvom na luksuznim jahtama na Španjolskom moru i u prestižnom Dublinskom klubu.",
+        "Marina je multidisciplinarna umjetnica i vrsna stručnjakinja za usluge čija kreativnost ne poznaje granice. Diplomirala je modni dizajn i u svaki detalj unosi profinjenu estetiku i umjetnički stil, pretvarajući uslugu u nezaboravno iskustvo. S bogatim iskustvom na luksuznim jahtama i u prestižnom restoranu u Dublinu, Marina je poznata stručnjakinja za silver service. Strastvena gurmanska i vinska znalica, podučava ne samo besprijekornu tehniku ​​već i umijeće stvaranja nezaboravnih, senzornih iskustava za goste, usavršenih na proslavljenom katamaranu Sunreef 60.",
       expertise: [
-        "Silver Service",
-        "Wine Pairing",
+        "Silver service",
+        "Wine pairing",
         "Dekoracije",
-        "Fine Dining",
-        "VIP Protokol",
+        "Fine dining",
+        "VIP protokol",
       ],
     },
     {
       name: "Marijana",
-      title: "Co-Founder & Project Manager",
-      badge: "Culinary Expert",
-      image:
-        "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&q=80",
+      title: "Co-Founder",
+      image: marijana,
       description:
-        "Projektna menadžerica s preko pet godina iskustva u vođenju tvrtki i strateškom upravljanju. Marketinški stručnjak, web developer i programer. Radila kao profesionalni kuhar na jahtama (30 i 40 metara) na Baltičkom i Francuskom moru, kao koktel majstor u Dublinu te kao privatni butler na Cipru.",
+        "Marijana je projektna menadžerica s iskustvom u vođenju tvrtki, marketingu i razvoju web rješenja. Radila je kao profesionalni kuhar na jahtama na Baltičkom i Francuskom moru, koktel majstor u poznatom Dublinskom klubu te privatni butler na Cipru. Njezino iskustvo na jahtama, uključujući rad na Sunreef 60 katamaranu, gdje je usavršavala silver service i vrhunsku komunikaciju, čine je iznimno sposobnom za edukaciju budućih profesionalaca.",
       expertise: [
         "Mixology",
-        "Culinary Arts",
+        "Culinary arts",
         "Housekeeping",
         "Management",
         "Bartending",
@@ -41,7 +39,7 @@ const Instructors = () => {
     <section className="instructors-section section-padding">
       <div className="container">
         <div className="instructors-header">
-          <h2>Upoznaj Svoj Tim</h2>
+          <h2>Upoznaj instruktorice</h2>
           <div className="gold-line"></div>
           <p>
             Profesionalke s preko 7 godina iskustva koje dijele svoju strast,
@@ -55,7 +53,6 @@ const Instructors = () => {
               <div className="instructor-card">
                 <div className="instructor-image">
                   <img src={instructor.image} alt={instructor.name} />
-                  <div className="instructor-badge">{instructor.badge}</div>
                 </div>
 
                 <div className="instructor-body">

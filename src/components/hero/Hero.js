@@ -22,14 +22,14 @@ const Hero = () => {
               <p className="hero-subtitle">Masterclass Yacht Academy</p>
 
               <h1 className="hero-title">
-                Postani Profesionalna Hostesa{" "}
-                <span className="text-gold">Luksuznih Jahti</span>
+                Postani profesionalna hostesa{" "}
+                <span className="text-gold">luksuznih jahti</span>
               </h1>
 
               <p className="hero-description">
-                Osvoji luksuzni svijet mega jahti i katamarana. Stekni vrhunske
+                Osvoji luksuzni svijet jahti i katamarana. Stekni vrhunske
                 vještine kroz ekskluzivne programe edukacije u kulinarstvu,
-                servisiranju i profesionalnom nastupu.
+                servisu i profesionalnom nastupu.
               </p>
 
               <div className="hero-buttons">

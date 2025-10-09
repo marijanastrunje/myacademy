@@ -20,13 +20,13 @@ const About = () => {
       icon: faGraduationCap,
       title: "Praktično znanje",
       description:
-        "Zaboravi teoriju - sve što naučiš odmah primjenjuješ u realnim uvjetima rada.",
+        "Odmah primjenjivo - sve što naučiš odmah primjenjuješ u realnim uvjetima rada.",
     },
     {
       icon: faAnchor,
       title: "Brzo do posla",
       description:
-        "Naše polaznice počinju raditi odmah nakon završetka programa - bez čekanja.",
+        "Naše polaznice odmah dobiju priliku za showcase charterima - bez čekanja.",
     },
     {
       icon: faHeart,
@@ -43,10 +43,10 @@ const About = () => {
           <h2>Tvoja karijera počinje ovdje</h2>
           <div className="gold-line"></div>
           <p className="lead">
-            Zamišljaš li se kako posluživaš šampanjac na palubi mega jahte dok
-            plovi prema francuskoj rivijeri? Ili kako pripremаš gourmet večeru
-            za VIP goste u kristalno plavom Jadranskom moru? To više nije san -
-            to je tvoja nova realnost.
+            Zamisli kako poslužujueš šampanjac na palubi jahte dok plovi uz
+            predivne jadranske otoke. Ili kako pripremаš gourmet večeru za VIP
+            goste u najljepšim tirkiznim uvalama. To više nije san - to je tvoja
+            nova realnost.
           </p>
         </div>
 
@@ -71,15 +71,14 @@ const About = () => {
             </h3>
             <p>
               Zato što ne prodajemo samo tečaj - nudimo ti kompletnu
-              transformaciju. Za 7 dana postaneš profesionalka spremna za
-              najluksuznija radna mjesta na planeti.
+              transformaciju. Za 7 dana postaješ profesionalna hostesa za rad na
+              najluksuznijim brodovima.
             </p>
             <p>
               <strong>Marina i Marijana</strong> nisu samo instruktorice - one
               su tvoje mentori koje su prošle isti put. Radile su na Sunreef 60
-              katamaranima, mega jahtama od 40+ metara, u Michelinovim
-              restoranima Dublina i na najekskluzivnijim privatnim chartovima
-              Europe.
+              katamaranima, jahtama, u prestižnim restoranima Dublina i na
+              najekskluzivnijim privatnim charterima na Mediteranu i u Europi.
             </p>
             <p>
               Svaki trik, svaki detalj, svaki tajni recept koji VIP gosti
@@ -120,10 +119,10 @@ const About = () => {
         </div>
 
         <div className="about-cta-box">
-          <h3>Sprema da promijeniš svoj život?</h3>
+          <h3>Spremna da promijeniš svoj život?</h3>
           <p>
             Svaki dan odgađanja je dan manje na jahtama tvojih snova. Mjesta su
-            ograničena. Prvi termin je 30. listopada. Ne čekaj.
+            ograničena. Prvi termin je 30. listopada. Prijavi se.
           </p>
           <div className="about-cta-buttons">
             <a href="#programs" className="btn btn-gold">

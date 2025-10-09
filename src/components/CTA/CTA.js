@@ -2,12 +2,6 @@ import React from "react";
 import "./CTA.css";
 
 const CTA = () => {
-  const stats = [
-    { number: "100+", label: "Polaznica" },
-    { number: "7", label: "Dana" },
-    { number: "95%", label: "Uspješnost" },
-  ];
-
   return (
     <section className="cta-section">
       <div className="cta-background">
@@ -23,34 +17,26 @@ const CTA = () => {
         <div className="row justify-content-center">
           <div className="col-lg-10">
             <div className="cta-content">
-              <div className="cta-badge">Upisi Otvoreni</div>
+              <div className="cta-badge">Zadnja prilika 2025</div>
 
               <h2 className="cta-title">
-                Započni Svoju Karijeru <span>Već Danas</span>
+                Postani dio <span>prve generacije</span> i daj si priliku za
+                nadprosječna primanja.
               </h2>
 
               <p className="cta-description">
-                Ne propusti priliku da se pridružiš elitnoj grupi profesionalnih
-                hostesa. Mjesta su ograničena, a sljedeći program započinje
-                uskoro.
+                Cjelosezonsko zapošljavanje za 2026 zaključuje se s krajem 2025.
+                Ovo su zadnji termini ove godine za praktičnu obuku na luksuznim
+                brodovima. Sljedeća prilika je travanj 2026 - prijavi se.
               </p>
 
               <div className="cta-buttons">
                 <a href="#contact" className="btn btn-gold">
-                  Prijavi Se Sada
+                  Rezerviraj Mjesto
                 </a>
                 <a href="#programs" className="btn btn-outline-gold">
-                  Saznaj Više
+                  Vidi Termine
                 </a>
-              </div>
-
-              <div className="cta-features">
-                {stats.map((stat, index) => (
-                  <div className="cta-feature" key={index}>
-                    <div className="cta-feature-number">{stat.number}</div>
-                    <div className="cta-feature-label">{stat.label}</div>
-                  </div>
-                ))}
               </div>
             </div>
           </div>

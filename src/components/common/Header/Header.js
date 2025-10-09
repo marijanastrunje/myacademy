@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -6,11 +6,25 @@ import {
   faInstagram,
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
-import logo from "../../../assets/img/MYA-logo.jpg";
+import logo from "../../../assets/img/MYA-logo2.JPG";
 import "./Header.css";
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState("#home");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const menuRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const navLinks = [
     { href: "#home", label: "Početna" },
@@ -65,7 +79,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <nav className="navbar navbar-expand-lg navbar-yacht">
+      <nav className="navbar navbar-expand-lg navbar-yacht ref={menuRef}">
         <div className="container">
           <a className="navbar-brand navbar-brand-yacht" href="#home">
             <img src={logo} alt="MY Academy Logo" className="navbar-logo" />
@@ -74,17 +88,18 @@ const Navbar = () => {
           <button
             className="navbar-toggler"
             type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-controls="navbarNav"
-            aria-expanded="false"
+            aria-expanded={isMenuOpen}
             aria-label="Toggle navigation"
           >
             <span className="navbar-toggler-icon"></span>
           </button>
 
           <div
-            className="collapse navbar-collapse justify-content-end"
+            className={`collapse navbar-collapse justify-content-end ${
+              isMenuOpen ? "show" : ""
+            }`}
             id="navbarNav"
           >
             <ul className="navbar-nav navbar-nav-yacht align-items-lg-center">
@@ -95,7 +110,10 @@ const Navbar = () => {
                       activeLink === link.href ? "active" : ""
                     }`}
                     href={link.href}
-                    onClick={() => setActiveLink(link.href)}
+                    onClick={() => {
+                      setActiveLink(link.href);
+                      setIsMenuOpen(false);
+                    }}
                   >
                     {link.label}
                   </a>

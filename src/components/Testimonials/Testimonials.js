@@ -32,11 +32,11 @@ const Testimonials = () => {
     <section className="testimonials-section section-padding" id="testimonials">
       <div className="container">
         <div className="testimonials-header">
-          <h2>Što Kažu Naše Polaznice</h2>
+          <h2>Što kažu o nama</h2>
           <div className="gold-line"></div>
           <p>
-            Pridruži se rastućoj zajednici uspješnih hostesa koje su stekle
-            vrhunske vještine kroz naše programe edukacije.
+            Pridruži nam se - čekamo te s otvorenim rukama i pričama cura koje
+            su već zaživjele svoje snove.
           </p>
         </div>
 
