@@ -42,7 +42,7 @@ const Navbar = () => {
             <div className="topbar-info">
               <a href="tel:+385123456789" className="topbar-item">
                 <FontAwesomeIcon icon={faPhone} />
-                <span className="topbar-text">+385 12 345 6789</span>
+                <span className="topbar-text">+385 99 3152 678</span>
               </a>
               <a href="mailto:info@myacademy.hr" className="topbar-item">
                 <FontAwesomeIcon icon={faEnvelope} />

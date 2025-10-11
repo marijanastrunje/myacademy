@@ -66,7 +66,7 @@ const About = () => {
 
           <div className="about-text-content">
             <h3>
-              Zašto cure biraju{" "}
+              Zašto izabrati baš{" "}
               <span className="highlight">našu akademiju?</span>
             </h3>
             <p>
@@ -76,8 +76,8 @@ const About = () => {
             </p>
             <p>
               <strong>Marina i Marijana</strong> nisu samo instruktorice - one
-              su tvoje mentori koje su prošle isti put. Radile su na Sunreef 60
-              katamaranima, jahtama, u prestižnim restoranima Dublina i na
+              su tvoje mentorice koje su prošle isti put. Radile su na Sunreef
+              60 katamaranima, jahtama, u prestižnim restoranima Dublina i na
               najekskluzivnijim privatnim charterima na Mediteranu i u Europi.
             </p>
             <p>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 import "./Contact.css";
 
 const Contact = () => {
@@ -19,8 +20,31 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Hvala na prijavi! Kontaktirat ćemo vas uskoro.");
+
+    // Pošalji email
+    emailjs
+      .send(
+        "service_vthnq8i", // Service ID
+        "template_s35ho6o", // Template ID za prijave
+        formData,
+        "tBFNn_WgRGGsuslCh" // Public Key
+      )
+      .then(
+        () => {
+          alert("Hvala na prijavi! Kontaktirat ćemo vas uskoro.");
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            program: "",
+            message: "",
+          });
+        },
+        (error) => {
+          alert("Greška pri slanju. Pokušaj ponovo.");
+          console.error(error);
+        }
+      );
   };
 
   return (
@@ -38,14 +62,14 @@ const Contact = () => {
 
           <div className="contact-form-wrapper">
             <form className="contact-form" onSubmit={handleSubmit}>
-              <h3>Prijava za Program</h3>
+              <h3>Prijava za program</h3>
               <p className="form-subtitle">
                 Popuni formu ispod i kontaktirat ćemo te s detaljima o programu
               </p>
 
               <div className="form-group">
                 <label className="form-label">
-                  Ime i Prezime<span className="required">*</span>
+                  Ime i prezime<span className="required">*</span>
                 </label>
                 <input
                   type="text"
@@ -110,7 +134,7 @@ const Contact = () => {
                   <option value="luxury-catamaran">
                     Luxury catamaran hostess
                   </option>
-                  <option value="introductory">Foundation course</option>
+                  <option value="foundation">Foundation course</option>
                   <option value="introductory">Introductory course</option>
                   <option value="info">Trebam više informacija</option>
                 </select>
@@ -128,7 +152,7 @@ const Contact = () => {
               </div>
 
               <button type="submit" className="btn btn-gold submit-btn">
-                Pošalji Prijavu
+                Pošalji prijavu
               </button>
 
               <p className="form-note">

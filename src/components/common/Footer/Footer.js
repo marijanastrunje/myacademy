@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPhone,
@@ -15,12 +16,34 @@ import "./Footer.css";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
+  const [status, setStatus] = useState("");
 
   const handleNewsletterSubmit = (e) => {
     e.preventDefault();
-    console.log("Newsletter signup:", email);
-    alert("Hvala na prijavi! Uskoro ćete primiti naše novosti.");
-    setEmail("");
+    setStatus("loading");
+
+    emailjs
+      .send(
+        "service_vthnq8i", // Service ID
+        "template_bz2f4zj", // Template ID za newsletter
+        {
+          email: email,
+        },
+        "tBFNn_WgRGGsuslCh" // Public Key
+      )
+      .then(
+        () => {
+          setStatus("success");
+          alert("Hvala na prijavi! Uskoro ćete primiti naše novosti.");
+          setEmail("");
+          setTimeout(() => setStatus(""), 3000);
+        },
+        (error) => {
+          setStatus("error");
+          alert("Greška pri prijavi. Pokušaj ponovo.");
+          console.error(error);
+        }
+      );
   };
 
   const programs = [
@@ -34,8 +57,8 @@ const Footer = () => {
     {
       icon: faPhone,
       label: "Telefon",
-      value: "+385 12 345 6789",
-      link: "tel:+385123456789",
+      value: "+385 99 3152 678",
+      link: "tel:+385993152678",
     },
     {
       icon: faEnvelope,
@@ -128,11 +151,19 @@ const Footer = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
+                    disabled={status === "loading"}
                   />
-                  <button type="submit" className="newsletter-btn">
-                    Prijavi Se
+                  <button
+                    type="submit"
+                    className="newsletter-btn"
+                    disabled={status === "loading"}
+                  >
+                    {status === "loading" ? "Šaljem..." : "Prijavi Se"}
                   </button>
                 </form>
+                {status === "success" && (
+                  <p className="newsletter-success">Uspješno prijavljen!</p>
+                )}
               </div>
             </div>
           </div>
