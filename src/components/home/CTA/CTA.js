@@ -3,23 +3,26 @@ import "./CTA.css";
 
 const CTA = () => {
   return (
-    <section className="cta-section">
-      <div className="cta-background">
+    <section className="cta-section" aria-labelledby="cta-heading">
+      <div className="cta-background" aria-hidden="true">
         <img
           src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1920&q=80"
-          alt="Luxury Yacht Interior"
+          alt=""
+          role="presentation"
         />
       </div>
 
-      <div className="cta-overlay"></div>
+      <div className="cta-overlay" aria-hidden="true"></div>
 
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-10">
             <div className="cta-content">
-              <div className="cta-badge">Zadnja prilika 2025</div>
+              <div className="cta-badge" role="status" aria-live="polite">
+                Zadnja prilika 2025
+              </div>
 
-              <h2 className="cta-title">
+              <h2 className="cta-title" id="cta-heading">
                 Postani dio <span>prve generacije</span> i daj si priliku za
                 nadprosječna primanja.
               </h2>
@@ -30,14 +33,22 @@ const CTA = () => {
                 brodovima. Sljedeća prilika je travanj 2026 - prijavi se.
               </p>
 
-              <div className="cta-buttons">
-                <a href="#contact" className="btn btn-gold">
+              <nav className="cta-buttons" aria-label="Akcije">
+                <a
+                  href="#contact"
+                  className="btn btn-gold"
+                  aria-label="Rezerviraj svoje mjesto na programu"
+                >
                   Rezerviraj Mjesto
                 </a>
-                <a href="#programs" className="btn btn-outline-gold">
+                <a
+                  href="#programs"
+                  className="btn btn-outline-gold"
+                  aria-label="Vidi dostupne termine programa"
+                >
                   Vidi Termine
                 </a>
-              </div>
+              </nav>
             </div>
           </div>
         </div>

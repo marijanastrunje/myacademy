@@ -124,15 +124,19 @@ const Programs = () => {
   ];
 
   return (
-    <section className="programs-section section-padding" id="programs">
+    <section
+      className="programs-section section-padding"
+      id="programs"
+      aria-labelledby="programs-heading"
+    >
       <div className="container">
         <div className="programs-hero">
-          <h2>Naši programi</h2>
+          <h2 id="programs-heading">Naši programi</h2>
           <p className="subtitle">
             Prvi službeni tečaj za hostese na luksuznim katamaranima i jahtama
             do 40m
           </p>
-          <div className="gold-line"></div>
+          <div className="gold-line" aria-hidden="true"></div>
           <p>
             Mi smo u industriji 7+ godina i odlučile smo formalizirati naše
             iskustvo i znanje u profesionalne programe. Budi dio prve službene
@@ -141,8 +145,10 @@ const Programs = () => {
           </p>
         </div>
 
-        <div className="launch-alert">
-          <div className="launch-badge">Launch ponuda - 30.10. 2025</div>
+        <div className="launch-alert" role="alert" aria-live="polite">
+          <div className="launch-badge" aria-hidden="true">
+            Launch ponuda - 30.10. 2025
+          </div>
           <h3>Postani dio prve službene generacije - 1.495€</h3>
           <p style={{ marginBottom: "1rem" }}>
             Prvih 8 polaznika dobiva posebnu launch cijenu od{" "}
@@ -167,6 +173,7 @@ const Programs = () => {
             href="#contact"
             className="btn btn-gold"
             style={{ marginTop: "1.5rem" }}
+            aria-label="Rezerviraj mjesto na programu obuke"
           >
             Rezerviraj mjesto
           </a>
@@ -174,39 +181,58 @@ const Programs = () => {
 
         <div className="programs-grid">
           {programs.map((program) => (
-            <div
+            <article
               className={`program-card ${program.featured ? "featured" : ""}`}
               key={program.id}
+              aria-labelledby={`program-title-${program.id}`}
             >
-              <div className={`program-badge ${program.badgeType || ""}`}>
-                {program.badge}
-              </div>
+              {program.badge && (
+                <div
+                  className={`program-badge ${program.badgeType || ""}`}
+                  aria-label={`Oznaka programa: ${program.badge}`}
+                >
+                  {program.badge}
+                </div>
+              )}
 
               <div className="program-image">
-                <img src={program.image} alt={program.title} />
+                <img
+                  src={program.image}
+                  alt={`${program.title} - praktična obuka na luksuznim brodovima`}
+                  loading="lazy"
+                />
               </div>
 
               <div className="program-body">
-                <div className="program-meta">
+                <div
+                  className="program-meta"
+                  aria-label="Informacije o programu"
+                >
                   <div className="program-meta-item">
-                    <FontAwesomeIcon icon={faClock} />
+                    <FontAwesomeIcon icon={faClock} aria-hidden="true" />
                     <span>{program.duration}</span>
                   </div>
                   <div className="program-meta-item">
                     <FontAwesomeIcon
                       icon={program.format === "Video Call" ? faVideo : faShip}
+                      aria-hidden="true"
                     />
                     <span>{program.format}</span>
                   </div>
                 </div>
 
-                <h3 className="program-title">{program.title}</h3>
+                <h3
+                  className="program-title"
+                  id={`program-title-${program.id}`}
+                >
+                  {program.title}
+                </h3>
                 <p className="program-subtitle">{program.subtitle}</p>
                 <p className="program-description">{program.description}</p>
 
                 {program.availableDates && (
                   <div className="program-dates">
-                    <FontAwesomeIcon icon={faCalendarAlt} />
+                    <FontAwesomeIcon icon={faCalendarAlt} aria-hidden="true" />
                     <span>
                       <strong>Dostupni termini:</strong>{" "}
                       {program.availableDates}
@@ -219,7 +245,7 @@ const Programs = () => {
                   <ul className="program-highlights-list">
                     {program.highlights.map((highlight, index) => (
                       <li key={index}>
-                        <FontAwesomeIcon icon={faCheck} />
+                        <FontAwesomeIcon icon={faCheck} aria-hidden="true" />
                         <span>{highlight}</span>
                       </li>
                     ))}
@@ -232,11 +258,17 @@ const Programs = () => {
                   <span className="program-price-label">Cijena</span>
                   <div>
                     {program.originalPrice && (
-                      <span className="program-price-original">
+                      <span
+                        className="program-price-original"
+                        aria-label={`Originalna cijena ${program.originalPrice} eura`}
+                      >
                         €{program.originalPrice}
                       </span>
                     )}
-                    <span className="program-price-amount">
+                    <span
+                      className="program-price-amount"
+                      aria-label={`Trenutna cijena ${program.price} eura`}
+                    >
                       €{program.price}
                     </span>
                   </div>
@@ -246,25 +278,32 @@ const Programs = () => {
                     </span>
                   )}
                 </div>
-                <a href="#contact" className="btn btn-gold program-cta">
+                <a
+                  href="#contact"
+                  className="btn btn-gold program-cta"
+                  aria-label={`${program.cta} za ${program.title}`}
+                >
                   {program.cta}
                 </a>
               </div>
-            </div>
+            </article>
           ))}
         </div>
 
-        <div className="credibility-section">
+        <aside
+          className="credibility-section"
+          aria-label="Naši rezultati i iskustvo"
+        >
           <h3>Zašto nam možeš vjerovati?</h3>
           <div className="credibility-items">
             {credibilityItems.map((item, index) => (
               <div className="credibility-item" key={index}>
-                <FontAwesomeIcon icon={item.icon} />
+                <FontAwesomeIcon icon={item.icon} aria-hidden="true" />
                 <span>{item.text}</span>
               </div>
             ))}
           </div>
-        </div>
+        </aside>
       </div>
     </section>
   );

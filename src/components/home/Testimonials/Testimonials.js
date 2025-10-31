@@ -29,41 +29,58 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="testimonials-section section-padding" id="testimonials">
+    <section
+      className="testimonials-section section-padding"
+      id="testimonials"
+      aria-labelledby="testimonials-heading"
+    >
       <div className="container">
-        <div className="testimonials-header">
-          <h2>Što kažu o nama</h2>
-          <div className="gold-line"></div>
+        <header className="testimonials-header">
+          <h2 id="testimonials-heading">Što kažu o nama</h2>
+          <div className="gold-line" aria-hidden="true"></div>
           <p>
             Pridruži nam se - čekamo te s otvorenim rukama i pričama cura koje
             su već zaživjele svoje snove.
           </p>
-        </div>
+        </header>
 
         <div className="row testimonials-grid">
           {testimonials.map((testimonial, index) => (
             <div className="col-lg-4 col-md-6" key={index}>
-              <div className="testimonial-card">
-                <div className="testimonial-rating">
+              <article
+                className="testimonial-card"
+                aria-labelledby={`testimonial-author-${index}`}
+              >
+                <div
+                  className="testimonial-rating"
+                  aria-label={`Ocjena: ${testimonial.rating} od 5 zvjezdica`}
+                  role="img"
+                >
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <FontAwesomeIcon icon={faStar} key={i} />
+                    <FontAwesomeIcon icon={faStar} key={i} aria-hidden="true" />
                   ))}
                 </div>
 
-                <p className="testimonial-text">{testimonial.text}</p>
+                <blockquote className="testimonial-text">
+                  <p>{testimonial.text}</p>
+                </blockquote>
 
-                <div className="testimonial-author">
+                <footer className="testimonial-author">
                   <img
                     src={testimonial.avatar}
-                    alt={testimonial.author}
+                    alt=""
                     className="testimonial-avatar"
+                    loading="lazy"
+                    role="presentation"
                   />
                   <div className="testimonial-author-info">
-                    <h4>{testimonial.author}</h4>
+                    <h4 id={`testimonial-author-${index}`}>
+                      {testimonial.author}
+                    </h4>
                     <p>{testimonial.role}</p>
                   </div>
-                </div>
-              </div>
+                </footer>
+              </article>
             </div>
           ))}
         </div>

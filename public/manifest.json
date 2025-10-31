@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "MY Academy",
+  "name": "Masterclass Yacht Academy",
+  "description": "Prva službena akademija za obuku hostesa na luksuznim jahtama u Hrvatskoj",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +21,8 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#0a1128",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "categories": ["education", "lifestyle", "business"]
 }

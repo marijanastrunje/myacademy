@@ -144,3 +144,13 @@
     font-size: 1.75rem;
   }
 }
+
+.expertise-tags {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.expertise-tag {
+  display: inline-block;
+}

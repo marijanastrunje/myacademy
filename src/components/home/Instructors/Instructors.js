@@ -1,6 +1,6 @@
 import React from "react";
-import marina from "../../assets/img/marina.JPG";
-import marijana from "../../assets/img/marijana.JPG";
+import marina from "../../../assets/img/marina.JPG";
+import marijana from "../../../assets/img/marijana.JPG";
 import "./Instructors.css";
 
 const Instructors = () => {
@@ -36,44 +36,67 @@ const Instructors = () => {
   ];
 
   return (
-    <section className="instructors-section section-padding">
+    <section
+      className="instructors-section section-padding"
+      aria-labelledby="instructors-heading"
+    >
       <div className="container">
-        <div className="instructors-header">
-          <h2>Upoznaj instruktorice</h2>
-          <div className="gold-line"></div>
+        <header className="instructors-header">
+          <h2 id="instructors-heading">Upoznaj instruktorice</h2>
+          <div className="gold-line" aria-hidden="true"></div>
           <p>
             Profesionalke s preko 7 godina iskustva koje dijele svoju strast,
             znanje i vrhunske vještine iz luksuzne charter industrije.
           </p>
-        </div>
+        </header>
 
         <div className="row">
           {instructors.map((instructor, index) => (
             <div className="col-lg-6" key={index}>
-              <div className="instructor-card">
-                <div className="instructor-image">
-                  <img src={instructor.image} alt={instructor.name} />
-                </div>
+              <article
+                className="instructor-card"
+                aria-labelledby={`instructor-name-${index}`}
+              >
+                <figure className="instructor-image">
+                  <img
+                    src={instructor.image}
+                    alt={`${instructor.name} - ${instructor.title} MY Academy`}
+                    loading="lazy"
+                  />
+                  <figcaption className="instructor-badge">
+                    {instructor.title}
+                  </figcaption>
+                </figure>
 
                 <div className="instructor-body">
-                  <h3 className="instructor-name">{instructor.name}</h3>
-                  <p className="instructor-title">{instructor.title}</p>
+                  <h3
+                    className="instructor-name"
+                    id={`instructor-name-${index}`}
+                  >
+                    {instructor.name}
+                  </h3>
+                  <p className="instructor-title" aria-label="Pozicija">
+                    {instructor.title}
+                  </p>
                   <p className="instructor-description">
                     {instructor.description}
                   </p>
 
                   <div className="instructor-expertise">
                     <h4>Područja Stručnosti:</h4>
-                    <div className="expertise-tags">
+                    <ul
+                      className="expertise-tags"
+                      aria-label={`Stručnosti instruktorice ${instructor.name}`}
+                    >
                       {instructor.expertise.map((skill, idx) => (
-                        <span className="expertise-tag" key={idx}>
+                        <li className="expertise-tag" key={idx}>
                           {skill}
-                        </span>
+                        </li>
                       ))}
-                    </div>
+                    </ul>
                   </div>
                 </div>
-              </div>
+              </article>
             </div>
           ))}
         </div>

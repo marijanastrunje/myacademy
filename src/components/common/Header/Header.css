@@ -1,3 +1,21 @@
+/* Skip to main content link */
+.skip-to-main {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 1rem 1.5rem;
+  background: var(--primary-gold);
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.skip-to-main:focus {
+  left: 50%;
+  top: 1rem;
+  transform: translateX(-50%);
+}
+
 /* ==================== HEADER WRAPPER ==================== */
 .header-wrapper {
   position: sticky;

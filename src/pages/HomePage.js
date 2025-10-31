@@ -1,25 +1,27 @@
 import React from "react";
 import Navbar from "../components/common/Header/Header";
 import Footer from "../components/common/Footer/Footer";
-import Hero from "../components/hero/Hero";
-import Programs from "../components/Programs/Programs";
-import About from "../components/About/About";
-import Instructors from "../components/Instructors/Instructors";
-import Testimonials from "../components/Testimonials/Testimonials";
-import CTA from "../components/CTA/CTA";
-import Contact from "../components/Contact/Contact";
+import Hero from "../components/home/hero/Hero";
+import Programs from "../components/home/Programs/Programs";
+import About from "../components/home/About/About";
+import Instructors from "../components/home/Instructors/Instructors";
+import Testimonials from "../components/home/Testimonials/Testimonials";
+import CTA from "../components/home/CTA/CTA";
+import Contact from "../components/home/Contact/Contact";
 
 const HomePage = () => {
   return (
     <>
       <Navbar />
-      <Hero />
-      <Programs />
-      <About />
-      <Instructors />
-      <Testimonials />
-      <CTA />
-      <Contact />
+      <main id="main-content" role="main">
+        <Hero />
+        <Programs />
+        <About />
+        <Instructors />
+        <Testimonials />
+        <CTA />
+        <Contact />
+      </main>
       <Footer />
     </>
   );

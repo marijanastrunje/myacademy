@@ -1,43 +1,323 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hr">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/MYA-logo.jpg" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#0a1128" />
+
+    <!-- Primary Meta Tags -->
+    <title>
+      MY Academy - Postani profesionalna Yacht Hostess | Luxury yacht training
+      Hrvatska
+    </title>
+    <meta
+      name="title"
+      content="MY Academy - Postani profesionalna yacht hostess | Luxury yacht training Hrvatska"
+    />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Prva službena akademija za obuku hostesa na luksuznim jahtama i katamaranima u Hrvatskoj. 7-dnevni programi s praksom na Sunreef 60. Stekni vrhunske vještine u silver service, fine dining i VIP protokolu. Zapošljavanje odmah nakon programa."
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <meta
+      name="keywords"
+      content="yacht hostess hrvatska, yacht stewardess obuka, luxury yacht training, catamaran hostess tečaj, yacht škola hrvatska, charter hostess course, superyacht training, nautički turizam hrvatska, yachting karijera, hospitality training, yacht hostess course croatia, luxury catamaran training"
+    />
+    <meta name="author" content="Masterclass Yacht Academy" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.myacademy.hr" />
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>MYAcademy</title>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-TCK9WCVT");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.myacademy.hr" />
+    <meta
+      property="og:title"
+      content="MY Academy - Postani Profesionalna Yacht Hostess"
+    />
+    <meta
+      property="og:description"
+      content="Prva službena akademija za obuku hostesa na luksuznim jahtama u Hrvatskoj. 7-dnevni programi s praksom na Sunreef 60. Zapošljavanje odmah nakon programa."
+    />
+    <meta property="og:image" content="https://www.myacademy.hr/logo512.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="hr_HR" />
+    <meta
+      property="og:site_name"
+      content="MY Academy - Masterclass Yacht Academy"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.myacademy.hr" />
+    <meta
+      property="twitter:title"
+      content="MY Academy - Postani Profesionalna Yacht Hostess"
+    />
+    <meta
+      property="twitter:description"
+      content="Prva službena akademija za obuku hostesa na luksuznim jahtama u Hrvatskoj. Zapošljavanje odmah nakon programa."
+    />
+    <meta
+      property="twitter:image"
+      content="https://www.myacademy.hr/og-image.jpg"
+    />
+
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="HR-17" />
+    <meta name="geo.placename" content="Split" />
+    <meta name="geo.position" content="43.5081;16.4402" />
+    <meta name="ICBM" content="43.5081, 16.4402" />
+
+    <!-- Additional SEO -->
+    <meta name="language" content="Croatian" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+    <meta name="distribution" content="global" />
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+    <!-- Manifest -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Preconnect to external resources for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+    <!-- Structured Data - Organization Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Masterclass Yacht Academy",
+        "alternateName": "MY Academy",
+        "url": "https://www.myacademy.hr",
+        "logo": "https://www.myacademy.hr/logo512.png",
+        "image": "https://www.myacademy.hr/logo512.png",
+        "description": "Prva službena akademija za obuku hostesa na luksuznim jahtama i katamaranima u Hrvatskoj. Profesionalna edukacija za karijeru u luksuznom nautičkom turizmu.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Split",
+          "addressRegion": "Splitsko-dalmatinska županija",
+          "addressCountry": "HR"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+385-99-3152-678",
+          "contactType": "Customer Service",
+          "email": "info@myacademy.hr",
+          "availableLanguage": ["Croatian", "English"],
+          "areaServed": "HR"
+        },
+        "sameAs": [
+          "https://www.facebook.com/myacademy",
+          "https://www.instagram.com/myacademy",
+          "https://www.linkedin.com/company/myacademy"
+        ],
+        "foundingDate": "2025",
+        "numberOfEmployees": "2-10",
+        "slogan": "Postani profesionalna yacht hostess"
+      }
+    </script>
+
+    <!-- Structured Data - Course Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "Luxury Yacht Hostess Professional Training",
+        "description": "Intenzivni 7-dnevni program za obuku profesionalnih hostesa na luksuznim jahtama s praksom na Sunreef 60 katamaranu. Program uključuje silver service, wine pairing, mixology, VIP protokol i decoration skills.",
+        "provider": {
+          "@type": "EducationalOrganization",
+          "name": "MY Academy",
+          "sameAs": "https://www.myacademy.hr"
+        },
+        "educationalLevel": "Professional Development",
+        "teaches": [
+          "Silver service za VIP goste",
+          "Wine pairing i program o vinima",
+          "Mixology - premium bartending",
+          "VIP protokol, etiketa i diskrecija",
+          "Decoration skills",
+          "Housekeeping vrhunskog nivoa"
+        ],
+        "timeRequired": "P7D",
+        "coursePrerequisites": "Osnovno znanje engleskog jezika",
+        "occupationalCredentialAwarded": "Yacht Hostess Professional Certificate",
+        "inLanguage": "hr",
+        "availableLanguage": ["Croatian", "English"],
+        "offers": {
+          "@type": "Offer",
+          "price": "1495",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
+          "validFrom": "2025-10-17",
+          "url": "https://www.myacademy.hr/#programs"
+        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "onsite",
+            "courseWorkload": "PT56H",
+            "startDate": "2025-10-30",
+            "endDate": "2025-11-06",
+            "instructor": {
+              "@type": "Person",
+              "name": "Marina & Marijana"
+            },
+            "location": {
+              "@type": "Place",
+              "name": "MY Academy Training Center",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Zagreb",
+                "addressCountry": "HR"
+              }
+            }
+          },
+          {
+            "@type": "CourseInstance",
+            "courseMode": "onsite",
+            "startDate": "2025-11-11",
+            "endDate": "2025-11-18",
+            "location": {
+              "@type": "Place",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Zagreb",
+                "addressCountry": "HR"
+              }
+            }
+          }
+        ]
+      }
+    </script>
+
+    <!-- Structured Data - FAQ Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Koliko traje program obuke za yacht hostess?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Naši programi traju 7 dana s punom praktičnom obukom na luksuznim brodovima. Tijekom programa polaznice stječu sve potrebne vještine za rad na luksuznim jahtama i katamaranima."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Trebam li imati prethodno iskustvo da se prijavim?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ne, nudimo Foundation program specifično dizajniran za potpune početnice bez iskustva. Za cure s iskustvom nudimo naprednije Luxury yacht i Luxury catamaran programe."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hoću li dobiti posao nakon završetka programa?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Da, naše polaznice odmah dobiju priliku za showcase chartere. Imamo partnerstva s vodećim charter tvrtkama i osiguravamo podršku u pronalasku zaposlenja."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kolika je cijena programa za yacht hostess?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Launch cijena za Luxury yacht hostess program je 1.495€ (redovna cijena 1.795€). Foundation program košta 899€, a Introductory online course 129€. Cijena uključuje svu opremu, materijale i certifikat."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Gdje se održava praktična obuka?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Praktična obuka se odvija na pravim luksuznim brodovima, uključujući Sunreef 60 katamarane i luksuzne jahte. Sve obuke se održavaju u Hrvatskoj."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Što sve uključuje program obuke?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Program uključuje: silver service za VIP goste, wine pairing, mixology i bartending, VIP protokol i etiketu, decoration skills, housekeeping vrhunskog nivoa, teamwork i profesionalnu komunikaciju. Sve s praktičnom obukom na brodu."
+            }
+          }
+        ]
+      }
+    </script>
+
+    <!-- Structured Data - BreadcrumbList -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Početna",
+            "item": "https://www.myacademy.hr"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Programi",
+            "item": "https://www.myacademy.hr/#programs"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "O Nama",
+            "item": "https://www.myacademy.hr/#about"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Kontakt",
+            "item": "https://www.myacademy.hr/#contact"
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TCK9WCVT"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <noscript
+      >MY Academy - Akademija za obuku yacht hostesa. Za najbolje iskustvo,
+      molimo omogućite JavaScript u vašem browseru.</noscript
+    >
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

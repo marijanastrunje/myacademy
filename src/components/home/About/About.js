@@ -37,31 +37,36 @@ const About = () => {
   ];
 
   return (
-    <section className="about-section section-padding" id="about">
+    <section
+      className="about-section section-padding"
+      id="about"
+      aria-labelledby="about-heading"
+    >
       <div className="container">
-        <div className="about-header">
-          <h2>Tvoja karijera počinje ovdje</h2>
-          <div className="gold-line"></div>
+        <header className="about-header">
+          <h2 id="about-heading">Tvoja karijera počinje ovdje</h2>
+          <div className="gold-line" aria-hidden="true"></div>
           <p className="lead">
             Zamisli kako poslužujueš šampanjac na palubi jahte dok plovi uz
             predivne jadranske otoke. Ili kako pripremаš gourmet večeru za VIP
             goste u najljepšim tirkiznim uvalama. To više nije san - to je tvoja
             nova realnost.
           </p>
-        </div>
+        </header>
 
         <div className="about-content">
           <div className="about-image-wrapper">
-            <div className="about-main-image">
+            <figure className="about-main-image">
               <img
                 src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=1000&q=80"
-                alt="Luxury Yacht Experience"
+                alt="Luksuzna jahta na Jadranu - tvoje buduće radno mjesto"
+                loading="lazy"
               />
-              <div className="about-image-badge">
+              <figcaption className="about-image-badge">
                 <h4>Tvoje radno mjesto</h4>
                 <p>Najljepše destinacije svijeta čekaju te</p>
-              </div>
-            </div>
+              </figcaption>
+            </figure>
           </div>
 
           <div className="about-text-content">
@@ -97,7 +102,10 @@ const About = () => {
           </div>
         </div>
 
-        <div className="about-features-section">
+        <aside
+          className="about-features-section"
+          aria-label="Prednosti našeg programa"
+        >
           <div className="container">
             <div className="about-features-title">
               <h3>Što te čeka u programu?</h3>
@@ -106,32 +114,44 @@ const About = () => {
 
             <div className="features-grid">
               {features.map((feature, index) => (
-                <div className="feature-item" key={index}>
-                  <div className="feature-icon">
+                <article className="feature-item" key={index}>
+                  <div className="feature-icon" aria-hidden="true">
                     <FontAwesomeIcon icon={feature.icon} />
                   </div>
                   <h4>{feature.title}</h4>
                   <p>{feature.description}</p>
-                </div>
+                </article>
               ))}
             </div>
           </div>
-        </div>
+        </aside>
 
-        <div className="about-cta-box">
+        <div
+          className="about-cta-box"
+          role="region"
+          aria-label="Poziv na akciju"
+        >
           <h3>Spremna da promijeniš svoj život?</h3>
           <p>
             Svaki dan odgađanja je dan manje na jahtama tvojih snova. Mjesta su
             ograničena. Prvi termin je 30. listopada. Prijavi se.
           </p>
-          <div className="about-cta-buttons">
-            <a href="#programs" className="btn btn-gold">
+          <nav className="about-cta-buttons" aria-label="Akcije">
+            <a
+              href="#programs"
+              className="btn btn-gold"
+              aria-label="Odaberi svoj program obuke"
+            >
               Odaberi svoj program
             </a>
-            <a href="#contact" className="btn btn-outline-gold">
+            <a
+              href="#contact"
+              className="btn btn-outline-gold"
+              aria-label="Prijavi se odmah za program"
+            >
               Prijavi se odmah
             </a>
-          </div>
+          </nav>
         </div>
       </div>
     </section>
