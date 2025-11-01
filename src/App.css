@@ -12,15 +12,33 @@
   --text-dark: #1a1a1a;
   --text-medium: #4a4a4a;
   --text-light: #737373;
+
+  /* Max width za cijelu stranicu */
+  --max-content-width: 1140px;
 }
 
 /* ==================== TYPOGRAPHY ==================== */
 body {
   font-family: "Lato", "Helvetica Neue", sans-serif;
   color: var(--text-dark);
-  line-height: 1.7;
+  line-height: 1.6;
   overflow-x: hidden;
   background: var(--white);
+  font-size: 15px;
+}
+
+/* Ograničavanje širine glavnog contenera - NE utječe na header/footer */
+main .container,
+.programs-section .container,
+.about-section .container,
+.contact-section .container,
+.instructors-section .container,
+.testimonials-section .container,
+.cta-section .container,
+.what-you-learn .container {
+  max-width: var(--max-content-width) !important;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 h1,
@@ -32,59 +50,60 @@ h6 {
   font-family: "Cormorant Garamond", "Georgia", serif;
   font-weight: 600;
   color: var(--primary-navy);
-  margin-bottom: 1.25rem;
-  letter-spacing: 0.5px;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.3px;
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 2.25rem;
   font-weight: 700;
   line-height: 1.2;
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 1.875rem;
   font-weight: 600;
   line-height: 1.3;
 }
 
 h3 {
-  font-size: 2.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 
 h4 {
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   font-weight: 600;
 }
 
 h5 {
-  font-size: 1.375rem;
+  font-size: 1.0625rem;
   font-weight: 500;
 }
 
 h6 {
-  font-size: 1.125rem;
+  font-size: 0.9375rem;
   font-weight: 500;
 }
 
 p {
-  font-size: 1.0625rem;
-  margin-bottom: 1.25rem;
+  font-size: 0.9375rem;
+  margin-bottom: 0.875rem;
   color: var(--text-medium);
-  line-height: 1.8;
+  line-height: 1.65;
 }
 
 .lead {
-  font-size: 1.25rem;
+  font-size: 1.0625rem;
   font-weight: 300;
   color: var(--text-light);
+  line-height: 1.6;
 }
 
 /* ==================== BUTTONS ==================== */
 .btn {
   border-radius: 0;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -115,7 +134,7 @@ p {
   background: var(--primary-gold);
   color: var(--white);
   border: 2px solid var(--primary-gold);
-  padding: 1rem 3rem;
+  padding: 0.875rem 2.5rem;
   font-size: 0.9375rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -135,7 +154,7 @@ p {
   background: var(--primary-navy);
   color: var(--white);
   border: 2px solid var(--primary-navy);
-  padding: 1rem 3rem;
+  padding: 0.875rem 2.5rem;
   font-size: 0.9375rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -155,7 +174,7 @@ p {
   background: transparent;
   color: var(--primary-gold);
   border: 2px solid var(--primary-gold);
-  padding: 1rem 3rem;
+  padding: 0.875rem 2.5rem;
   font-size: 0.9375rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -172,36 +191,36 @@ p {
 
 /* ==================== SECTION STYLES ==================== */
 .section-padding {
-  padding: 6rem 0;
+  padding: 3rem 0;
 }
 
 .section-title {
   position: relative;
   display: inline-block;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
 .section-title h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 0.625rem;
 }
 
 .section-title::after {
   content: "";
   position: absolute;
-  bottom: -15px;
+  bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
-  width: 100px;
+  width: 60px;
   height: 2px;
   background: var(--primary-gold);
 }
 
 .section-subtitle {
-  font-size: 1.125rem;
+  font-size: 0.9375rem;
   color: var(--text-light);
   font-weight: 300;
-  margin-top: 1rem;
+  margin-top: 0.625rem;
 }
 
 /* ==================== UTILITIES ==================== */
@@ -235,24 +254,24 @@ p {
 
 /* ==================== DECORATIVE ELEMENTS ==================== */
 .gold-line {
-  width: 80px;
+  width: 50px;
   height: 2px;
   background: var(--primary-gold);
-  margin: 1.5rem auto;
+  margin: 0.75rem auto;
 }
 
 .gold-line-left {
-  width: 80px;
+  width: 50px;
   height: 2px;
   background: var(--primary-gold);
-  margin: 1.5rem 0;
+  margin: 0.75rem 0;
 }
 
 /* ==================== ANIMATIONS ==================== */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(25px);
   }
   to {
     opacity: 1;
@@ -270,11 +289,11 @@ p {
 }
 
 .fade-in-up {
-  animation: fadeInUp 0.8s ease-out forwards;
+  animation: fadeInUp 0.7s ease-out forwards;
 }
 
 .fade-in {
-  animation: fadeIn 0.8s ease-out forwards;
+  animation: fadeIn 0.7s ease-out forwards;
 }
 
 /* ==================== OVERLAYS ==================== */
@@ -319,37 +338,82 @@ p {
 /* ==================== RESPONSIVE ==================== */
 @media (max-width: 992px) {
   h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   h2 {
-    font-size: 2.5rem;
+    font-size: 1.625rem;
   }
   h3 {
-    font-size: 2rem;
+    font-size: 1.375rem;
   }
 
   .section-padding {
-    padding: 4rem 0;
+    padding: 2.5rem 0;
+  }
+
+  main .container,
+  .programs-section .container,
+  .about-section .container,
+  .contact-section .container,
+  .instructors-section .container,
+  .testimonials-section .container,
+  .cta-section .container,
+  .what-you-learn .container {
+    padding-left: 18px;
+    padding-right: 18px;
   }
 }
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 2.5rem;
+    font-size: 1.75rem;
   }
   h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   h3 {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
   }
 
   p {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 
   .section-padding {
-    padding: 3rem 0;
+    padding: 2rem 0;
+  }
+
+  .btn-gold,
+  .btn-navy,
+  .btn-outline-gold {
+    padding: 0.75rem 2rem;
+    font-size: 0.875rem;
+    letter-spacing: 1.2px;
+  }
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.375rem;
+  }
+  h3 {
+    font-size: 1.125rem;
+  }
+
+  .section-padding {
+    padding: 1.75rem 0;
   }
 }
 
@@ -357,7 +421,7 @@ p {
 
 /* Focus styles */
 *:focus {
-  outline: 3px solid var(--primary-gold);
+  outline: 2px solid var(--primary-gold);
   outline-offset: 2px;
 }
 
@@ -368,7 +432,7 @@ p {
 
 /* Focus visible for keyboard users */
 *:focus-visible {
-  outline: 3px solid var(--primary-gold);
+  outline: 2px solid var(--primary-gold);
   outline-offset: 2px;
 }
 
@@ -411,9 +475,4 @@ p {
   .nav-link-yacht::after {
     height: 3px;
   }
-}
-
-/* Dark mode support (optional) */
-@media (prefers-color-scheme: dark) {
-  /* Already have dark design, but can adjust if needed */
 }

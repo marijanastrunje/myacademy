@@ -39,6 +39,7 @@ const Instructors = () => {
     <section
       className="instructors-section section-padding"
       aria-labelledby="instructors-heading"
+      id="instructors"
     >
       <div className="container">
         <header className="instructors-header">
