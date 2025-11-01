@@ -1,41 +1,7 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGem,
-  faGraduationCap,
-  faAnchor,
-  faHeart,
-} from "@fortawesome/free-solid-svg-icons";
 import "./About.css";
 
 const About = () => {
-  const features = [
-    {
-      icon: faGem,
-      title: "Luksuzni standardi",
-      description:
-        "Učiš od najboljih - stekni vještine koje traže vlasnici najskupljih jahti na svijetu.",
-    },
-    {
-      icon: faGraduationCap,
-      title: "Praktično znanje",
-      description:
-        "Odmah primjenjivo - sve što naučiš odmah primjenjuješ u realnim uvjetima rada.",
-    },
-    {
-      icon: faAnchor,
-      title: "Brzo do posla",
-      description:
-        "Naše polaznice odmah dobiju priliku za showcase charterima - bez čekanja.",
-    },
-    {
-      icon: faHeart,
-      title: "Doživotna podrška",
-      description:
-        "Nisi sama - postaneš dio zajednice koja te podržava kroz cijelu karijeru.",
-    },
-  ];
-
   return (
     <section
       className="about-section section-padding"
@@ -46,7 +12,7 @@ const About = () => {
         <header className="about-header">
           <h2 id="about-heading">Tvoja karijera počinje ovdje</h2>
           <div className="gold-line" aria-hidden="true"></div>
-          <p className="lead">
+          <p>
             Zamisli kako poslužujueš šampanjac na palubi jahte dok plovi uz
             predivne jadranske otoke. Ili kako pripremаš gourmet večeru za VIP
             goste u najljepšim tirkiznim uvalama. To više nije san - to je tvoja
@@ -101,30 +67,6 @@ const About = () => {
             </div>
           </div>
         </div>
-
-        <aside
-          className="about-features-section"
-          aria-label="Prednosti našeg programa"
-        >
-          <div className="container">
-            <div className="about-features-title">
-              <h3>Što te čeka u programu?</h3>
-              <p>Ozbiljne vještine. Realna praksa. Garantirani rezultati.</p>
-            </div>
-
-            <div className="features-grid">
-              {features.map((feature, index) => (
-                <article className="feature-item" key={index}>
-                  <div className="feature-icon" aria-hidden="true">
-                    <FontAwesomeIcon icon={feature.icon} />
-                  </div>
-                  <h4>{feature.title}</h4>
-                  <p>{feature.description}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </aside>
 
         <div
           className="about-cta-box"

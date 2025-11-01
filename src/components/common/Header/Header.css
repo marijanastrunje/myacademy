@@ -1,4 +1,4 @@
-/* Skip to main content link */
+/* ==================== SKIP LINK ==================== */
 .skip-to-main {
   position: absolute;
   left: -9999px;
@@ -16,7 +16,7 @@
   transform: translateX(-50%);
 }
 
-/* ==================== HEADER WRAPPER ==================== */
+/* ==================== HEADER WRAPPER - NEMA HOVER ==================== */
 .header-wrapper {
   position: sticky;
   top: 0;
@@ -43,22 +43,23 @@
   align-items: center;
 }
 
+/* TOPBAR LINKOVI - IMA HOVER jer su klikabilni */
 .topbar-item {
   display: flex;
   align-items: center;
   gap: 0.625rem;
   color: var(--white);
-  font-size: 0.875rem;
+  font-size: var(--font-size-small);
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all var(--transition-speed) ease;
   font-weight: 400;
   letter-spacing: 0.3px;
 }
 
 .topbar-item svg {
   color: var(--primary-gold);
-  font-size: 0.875rem;
-  transition: all 0.3s ease;
+  font-size: var(--font-size-small);
+  transition: all var(--transition-speed) ease;
 }
 
 .topbar-item:hover {
@@ -75,6 +76,7 @@
   align-items: center;
 }
 
+/* SOCIAL LINKOVI - IMA HOVER jer su klikabilni */
 .social-link {
   display: flex;
   align-items: center;
@@ -84,7 +86,7 @@
   border-radius: 0;
   background: transparent;
   color: var(--white);
-  transition: all 0.3s ease;
+  transition: all var(--transition-speed) ease;
   border: 1px solid rgba(201, 169, 97, 0.3);
 }
 
@@ -109,6 +111,7 @@
   transform: translateX(-70%);
 }
 
+/* LOGO - NEMA HOVER, samo slika */
 .navbar-logo {
   height: 90px;
   width: auto;
@@ -118,13 +121,14 @@
   gap: 0;
 }
 
+/* NAV LINKOVI - IMA HOVER jer su klikabilni */
 .nav-link-yacht {
   color: var(--primary-navy);
   padding: 2rem 1.5rem;
   font-weight: 500;
-  font-size: 0.9375rem;
+  font-size: var(--font-size-body);
   letter-spacing: 1px;
-  transition: color 0.3s ease;
+  transition: color var(--transition-speed) ease;
   position: relative;
   text-transform: uppercase;
   font-family: "Lato", sans-serif;
@@ -138,7 +142,7 @@
   width: 0;
   height: 2px;
   background: var(--primary-gold);
-  transition: width 0.3s ease;
+  transition: width var(--transition-speed) ease;
 }
 
 .nav-link-yacht:hover,
@@ -151,10 +155,11 @@
   width: 100%;
 }
 
+/* NAV CTA BUTTON - IMA HOVER (nasljeđeno od App.css) */
 .nav-cta {
   padding: 0.75rem 2.5rem;
-  margin-left: 1.5rem;
-  font-size: 0.875rem;
+  margin-left: var(--card-gap);
+  font-size: var(--font-size-small);
   position: relative;
   overflow: hidden;
 }
@@ -180,10 +185,11 @@
 }
 
 /* ==================== MOBILE MENU ==================== */
+/* TOGGLER - IMA HOVER jer je button */
 .navbar-toggler {
-  border: 2px solid var(--primary-navy);
+  border: var(--border-width) solid var(--primary-navy);
   padding: 0.5rem 0.75rem;
-  transition: all 0.3s ease;
+  transition: all var(--transition-speed) ease;
 }
 
 .navbar-toggler:hover {
@@ -229,8 +235,8 @@
   .navbar-collapse {
     background: var(--white);
     margin-top: 1rem;
-    padding: 1.5rem;
-    border-top: 2px solid var(--cream);
+    padding: var(--card-padding);
+    border-top: var(--border-width) solid var(--cream);
   }
 
   .nav-link-yacht {

@@ -3,25 +3,27 @@
   background: linear-gradient(180deg, var(--cream) 0%, var(--white) 100%);
   position: relative;
   overflow: hidden;
+  padding: var(--section-padding) 0;
 }
 
+/* ==================== HEADER - CENTRIRAN ==================== */
 .success-section h2 {
   font-size: 1.875rem;
   margin-bottom: 0.75rem;
   color: var(--primary-navy);
+  text-align: center;
 }
 
 .success-section .lead {
-  font-size: 1rem;
+  font-size: var(--font-size-body);
   color: var(--text-medium);
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 650px;
+  margin: 0 auto;
+  padding-bottom: 10px;
   line-height: 1.65;
-  margin-bottom: 1.5rem;
 }
 
-/* ==================== VIDEO WRAPPER ==================== */
+/* ==================== VIDEO WRAPPER - NEMA HOVER ==================== */
 .video-wrapper {
   position: relative;
 }
@@ -32,7 +34,7 @@
   padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
   height: 0;
   overflow: hidden;
-  box-shadow: 0 15px 40px rgba(10, 17, 40, 0.15);
+  box-shadow: var(--box-shadow-card);
   background: var(--primary-navy);
 }
 
@@ -45,16 +47,16 @@
   border: none;
 }
 
-/* ==================== SUCCESS CONTENT ==================== */
+/* ==================== SUCCESS CONTENT - NEMA HOVER ==================== */
 .success-content {
   padding-left: 2rem;
 }
 
 .success-content p {
-  font-size: 0.9375rem;
+  font-size: var(--font-size-body);
   color: var(--text-medium);
   margin-bottom: 1.125rem;
-  line-height: 1.75;
+  line-height: 1.65;
 }
 
 .success-content p:last-of-type {
@@ -68,11 +70,11 @@
 /* ==================== RESPONSIVE ==================== */
 @media (max-width: 992px) {
   .success-section h2 {
-    font-size: 1.75rem;
+    font-size: 1.625rem;
   }
 
   .success-section .lead {
-    font-size: 0.9375rem;
+    font-size: var(--font-size-body);
     margin-bottom: 1rem;
   }
 
@@ -82,27 +84,31 @@
 }
 
 @media (max-width: 768px) {
+  .success-section {
+    padding: 2.5rem 0;
+  }
+
   .success-section h2 {
-    font-size: 1.625rem;
+    font-size: 1.5rem;
   }
 
   .success-section .lead {
-    font-size: 0.9375rem;
+    font-size: var(--font-size-body);
     margin-bottom: 1rem;
   }
 
   .success-content {
     padding-left: 0;
-    margin-top: 1.5rem;
+    margin-top: var(--card-gap);
   }
 
   .success-content p {
-    font-size: 0.875rem;
+    font-size: var(--font-size-small);
     margin-bottom: 1rem;
   }
 
   .success-content p:last-of-type {
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--card-gap);
   }
 
   .success-content .btn {
@@ -113,14 +119,14 @@
 
 @media (max-width: 576px) {
   .success-section h2 {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
   }
 
   .success-section .lead {
-    font-size: 0.875rem;
+    font-size: var(--font-size-small);
   }
 
   .success-content p {
-    font-size: 0.8125rem;
+    font-size: var(--font-size-small);
   }
 }

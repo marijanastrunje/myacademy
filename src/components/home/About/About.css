@@ -5,27 +5,31 @@
   overflow: hidden;
 }
 
+/* ==================== STANDARDIZIRANI HEADER ==================== */
 .about-header {
   text-align: center;
   margin-bottom: 2.5rem;
 }
 
 .about-header h2 {
+  font-size: 1.875rem;
   margin-bottom: 0.75rem;
+  color: var(--primary-navy);
 }
 
-.about-header .lead {
-  font-size: 1rem;
+.about-header p {
+  font-size: var(--font-size-body);
   color: var(--text-medium);
-  max-width: 700px;
+  max-width: 650px;
   margin: 0 auto;
   line-height: 1.65;
 }
 
+/* ==================== CONTENT ==================== */
 .about-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
+  gap: var(--card-gap);
   align-items: center;
   margin-bottom: 2.5rem;
 }
@@ -37,7 +41,7 @@
 .about-main-image {
   position: relative;
   overflow: hidden;
-  box-shadow: 0 15px 40px rgba(10, 17, 40, 0.12);
+  box-shadow: var(--box-shadow-card);
 }
 
 .about-main-image img {
@@ -66,7 +70,7 @@
 }
 
 .about-image-badge p {
-  font-size: 0.8125rem;
+  font-size: var(--font-size-small);
   color: var(--white);
   margin: 0;
   opacity: 0.95;
@@ -77,6 +81,7 @@
   font-size: 1.625rem;
   margin-bottom: 1rem;
   line-height: 1.35;
+  color: var(--primary-navy);
 }
 
 .about-text-content .highlight {
@@ -85,8 +90,8 @@
 }
 
 .about-text-content p {
-  font-size: 0.9375rem;
-  line-height: 1.7;
+  font-size: var(--font-size-body);
+  line-height: 1.65;
   margin-bottom: 1rem;
   color: var(--text-medium);
 }
@@ -97,12 +102,12 @@
   gap: 0.75rem;
   margin-top: 1.5rem;
   padding-top: 1.25rem;
-  border-top: 2px solid var(--primary-gold);
+  border-top: var(--border-width) solid var(--primary-gold);
 }
 
 .about-signature-text {
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.0625rem;
+  font-size: var(--font-size-large);
   color: var(--primary-navy);
   font-weight: 600;
   font-style: italic;
@@ -115,73 +120,7 @@
   letter-spacing: 0.8px;
 }
 
-.about-features-section {
-  background: var(--white);
-  padding: 2.5rem 0;
-  margin: 0px;
-}
-
-.about-features-title {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.about-features-title h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.75rem;
-}
-
-.about-features-title p {
-  font-size: 0.9375rem;
-  color: var(--text-light);
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-}
-
-.feature-item {
-  text-align: center;
-  transition: all 0.3s ease;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
-
-.feature-item:hover {
-  transform: translateY(-8px);
-}
-
-.feature-icon {
-  font-size: 2.25rem;
-  color: var(--primary-gold);
-  margin-bottom: 1rem;
-  transition: all 0.3s ease;
-}
-
-.feature-item:hover .feature-icon {
-  transform: scale(1.12) rotate(5deg);
-  color: var(--accent-gold);
-}
-
-.feature-item h4 {
-  font-size: 1.0625rem;
-  font-weight: 600;
-  color: var(--primary-navy);
-  margin-bottom: 0.625rem;
-}
-
-.feature-item p {
-  font-size: 0.8125rem;
-  color: var(--text-medium);
-  line-height: 1.55;
-  margin: 0;
-}
-
+/* ==================== CTA BOX ==================== */
 .about-cta-box {
   background: var(--primary-navy);
   padding: 2.5rem 2rem;
@@ -211,19 +150,19 @@
 }
 
 .about-cta-box p {
-  font-size: 1rem;
+  font-size: var(--font-size-large);
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 1.75rem;
   max-width: 650px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .about-cta-buttons {
   display: flex;
-  gap: 1rem;
+  gap: var(--card-gap);
   justify-content: center;
   position: relative;
 }
@@ -238,16 +177,19 @@
   .about-main-image img {
     height: 350px;
   }
-
-  .features-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.75rem;
-  }
 }
 
 @media (max-width: 768px) {
   .about-header {
     margin-bottom: 2rem;
+  }
+
+  .about-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-header .lead {
+    font-size: var(--font-size-body);
   }
 
   .about-main-image img {
@@ -273,12 +215,7 @@
   }
 
   .about-text-content p {
-    font-size: 0.875rem;
-  }
-
-  .features-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    font-size: var(--font-size-small);
   }
 
   .about-cta-box {
@@ -290,7 +227,7 @@
   }
 
   .about-cta-box p {
-    font-size: 0.9375rem;
+    font-size: var(--font-size-body);
   }
 
   .about-cta-buttons {
@@ -306,7 +243,7 @@
 
 @media (max-width: 576px) {
   .about-header h2 {
-    font-size: 1.625rem;
+    font-size: 1.375rem;
   }
 
   .about-text-content h3 {
@@ -316,12 +253,4 @@
   .about-cta-box h3 {
     font-size: 1.375rem;
   }
-
-  .feature-icon {
-    font-size: 2rem;
-  }
-}
-
-.about-section.section-padding {
-  padding-top: 0;
 }

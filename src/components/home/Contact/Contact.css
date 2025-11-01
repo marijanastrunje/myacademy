@@ -1,36 +1,40 @@
 /* ==================== CONTACT SECTION ==================== */
 .contact-section {
   background: linear-gradient(180deg, var(--white) 0%, var(--cream) 100%);
+  padding: var(--section-padding) 0;
 }
 
+/* ==================== STANDARDIZIRANI HEADER ==================== */
 .contact-header {
   text-align: center;
   margin-bottom: 2.5rem;
 }
 
 .contact-header h2 {
+  font-size: 1.875rem;
   margin-bottom: 0.75rem;
+  color: var(--primary-navy);
 }
 
 .contact-header p {
-  font-size: 0.9375rem;
-  color: var(--text-light);
+  font-size: var(--font-size-body);
+  color: var(--text-medium);
   max-width: 650px;
   margin: 0 auto;
   line-height: 1.65;
 }
 
-/* ==================== FORM WRAPPER ==================== */
+/* ==================== FORM WRAPPER - NEMA HOVER ==================== */
 .contact-form-wrapper {
   max-width: 700px;
   margin: 0 auto;
 }
 
-/* ==================== MODERN FORM ==================== */
+/* ==================== FORM - NEMA HOVER NA CONTAINERU ==================== */
 .contact-form {
   background: var(--white);
   padding: 2rem 1.75rem;
-  box-shadow: 0 6px 25px rgba(10, 17, 40, 0.08);
+  box-shadow: var(--box-shadow-card);
 }
 
 .contact-form h3 {
@@ -43,13 +47,14 @@
 }
 
 .form-subtitle {
-  font-size: 0.875rem;
-  color: var(--text-light);
+  font-size: var(--font-size-small);
+  color: var(--text-medium);
   margin-bottom: 1.75rem;
   text-align: center;
   line-height: 1.5;
 }
 
+/* ==================== FORM ELEMENTS ==================== */
 .form-group {
   margin-bottom: 1.25rem;
   position: relative;
@@ -59,7 +64,7 @@
   font-weight: 600;
   color: var(--primary-navy);
   margin-bottom: 0.5rem;
-  font-size: 0.8125rem;
+  font-size: var(--font-size-small);
   letter-spacing: 0.3px;
   display: block;
 }
@@ -69,11 +74,12 @@
   margin-left: 0.25rem;
 }
 
+/* INPUT I SELECT - hover samo na focus stanju */
 .form-control {
-  border: 2px solid #e0e0e0;
+  border: var(--border-width) solid #e0e0e0;
   padding: 0.75rem 0.875rem;
-  font-size: 0.875rem;
-  transition: all 0.3s ease;
+  font-size: var(--font-size-small);
+  transition: all var(--transition-speed) ease;
   border-radius: 0;
   width: 100%;
   background: var(--white);
@@ -88,15 +94,15 @@
 
 .form-control::placeholder {
   color: #b0b0b0;
-  font-size: 0.8125rem;
+  font-size: var(--font-size-small);
 }
 
 .form-select {
-  border: 2px solid #e0e0e0;
+  border: var(--border-width) solid #e0e0e0;
   padding: 0.75rem 0.875rem;
-  font-size: 0.875rem;
+  font-size: var(--font-size-small);
   border-radius: 0;
-  transition: all 0.3s ease;
+  transition: all var(--transition-speed) ease;
   width: 100%;
   background: var(--white);
   cursor: pointer;
@@ -115,13 +121,20 @@ textarea.form-control {
   line-height: 1.6;
 }
 
+/* ==================== SUBMIT BUTTON - IMA HOVER (nasljeđeno) ==================== */
 .submit-btn {
   width: 100%;
   margin-top: 0.75rem;
   padding: 0.875rem 2rem;
-  font-size: 0.875rem;
+  font-size: var(--font-size-small);
 }
 
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ==================== FORM NOTE - NEMA HOVER ==================== */
 .form-note {
   font-size: 0.75rem;
   color: var(--text-light);
@@ -131,6 +144,7 @@ textarea.form-control {
   line-height: 1.5;
 }
 
+/* ==================== UTILITIES ==================== */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -143,15 +157,22 @@ textarea.form-control {
   border-width: 0;
 }
 
-.submit-btn:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
 /* ==================== RESPONSIVE ==================== */
 @media (max-width: 768px) {
+  .contact-section {
+    padding: 2.5rem 0;
+  }
+
   .contact-header {
     margin-bottom: 2rem;
+  }
+
+  .contact-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-header p {
+    font-size: var(--font-size-small);
   }
 
   .contact-form {
@@ -163,13 +184,13 @@ textarea.form-control {
   }
 
   .form-subtitle {
-    font-size: 0.8125rem;
+    font-size: var(--font-size-small);
   }
 
   .form-control,
   .form-select {
     padding: 0.625rem 0.75rem;
-    font-size: 0.8125rem;
+    font-size: var(--font-size-small);
   }
 
   textarea.form-control {
@@ -178,7 +199,7 @@ textarea.form-control {
 
   .submit-btn {
     padding: 0.75rem 1.75rem;
-    font-size: 0.8125rem;
+    font-size: var(--font-size-small);
   }
 }
 
@@ -191,7 +212,7 @@ textarea.form-control {
     font-size: 1.375rem;
   }
 
-  .contact-header p {
-    font-size: 0.875rem;
+  .contact-header h2 {
+    font-size: 1.375rem;
   }
 }

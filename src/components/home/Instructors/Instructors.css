@@ -1,39 +1,46 @@
 /* ==================== INSTRUCTORS SECTION ==================== */
 .instructors-section {
   background: var(--white);
+  padding: var(--section-padding) 0;
 }
 
+/* ==================== STANDARDIZIRANI HEADER ==================== */
 .instructors-header {
   text-align: center;
   margin-bottom: 2.5rem;
 }
 
 .instructors-header h2 {
+  font-size: 1.875rem;
   margin-bottom: 0.75rem;
+  color: var(--primary-navy);
 }
 
 .instructors-header p {
-  font-size: 0.9375rem;
-  color: var(--text-light);
+  font-size: var(--font-size-body);
+  color: var(--text-medium);
   max-width: 650px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
+/* ==================== INSTRUCTOR CARD - KLIKABILNA, IMA HOVER ==================== */
 .instructor-card {
   background: var(--white);
-  border: 2px solid var(--cream);
-  transition: all 0.3s ease;
+  border: var(--border-width) solid var(--border-color);
+  transition: all var(--transition-speed) ease;
   height: 100%;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .instructor-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 30px rgba(10, 17, 40, 0.12);
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow-hover);
   border-color: var(--primary-gold);
 }
 
+/* ==================== IMAGE ==================== */
 .instructor-image {
   position: relative;
   height: 320px;
@@ -48,9 +55,10 @@
 }
 
 .instructor-card:hover .instructor-image img {
-  transform: scale(1.08);
+  transform: scale(1.05);
 }
 
+/* BADGE - NEMA HOVER, nije klikabilan */
 .instructor-badge {
   position: absolute;
   bottom: 15px;
@@ -63,8 +71,9 @@
   letter-spacing: 0.8px;
 }
 
+/* ==================== BODY - NEMA HOVER ==================== */
 .instructor-body {
-  padding: 1.5rem;
+  padding: var(--card-padding);
 }
 
 .instructor-name {
@@ -77,7 +86,7 @@
 }
 
 .instructor-title {
-  font-size: 0.875rem;
+  font-size: var(--font-size-small);
   color: var(--primary-gold);
   text-transform: uppercase;
   letter-spacing: 0.8px;
@@ -89,17 +98,18 @@
   color: var(--text-medium);
   margin-bottom: 1rem;
   line-height: 1.65;
-  font-size: 0.875rem;
+  font-size: var(--font-size-small);
 }
 
+/* ==================== EXPERTISE ==================== */
 .instructor-expertise {
   margin-top: 1rem;
   padding-top: 1rem;
-  border-top: 1px solid var(--cream);
+  border-top: 1px solid var(--border-color);
 }
 
 .instructor-expertise h4 {
-  font-size: 0.8125rem;
+  font-size: var(--font-size-small);
   font-weight: 600;
   color: var(--primary-navy);
   margin-bottom: 0.75rem;
@@ -116,26 +126,22 @@
   margin: 0;
 }
 
+/* TAGOVI */
 .expertise-tag {
   background: var(--cream);
   color: var(--primary-navy);
   padding: 0.375rem 0.75rem;
   font-size: 0.75rem;
   border: 1px solid var(--primary-gold);
-  transition: all 0.3s ease;
+  transition: all var(--transition-speed) ease;
   display: inline-block;
-}
-
-.expertise-tag:hover {
-  background: var(--primary-gold);
-  color: var(--white);
-  transform: translateY(-2px);
+  cursor: pointer;
 }
 
 /* ==================== RESPONSIVE ==================== */
 @media (max-width: 992px) {
   .instructor-card {
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--card-gap);
   }
 
   .instructor-image {
@@ -144,8 +150,20 @@
 }
 
 @media (max-width: 768px) {
+  .instructors-section {
+    padding: 2.5rem 0;
+  }
+
   .instructors-header {
     margin-bottom: 2rem;
+  }
+
+  .instructors-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .instructors-header p {
+    font-size: var(--font-size-small);
   }
 
   .instructor-image {
@@ -161,7 +179,7 @@
   }
 
   .instructor-description {
-    font-size: 0.8125rem;
+    font-size: var(--font-size-small);
   }
 }
 

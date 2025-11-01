@@ -6,6 +6,7 @@
   background: var(--primary-navy);
 }
 
+/* ==================== BACKGROUND - NEMA HOVER ==================== */
 .cta-background {
   position: absolute;
   top: 0;
@@ -35,6 +36,7 @@
   z-index: 1;
 }
 
+/* ==================== CONTENT - NEMA HOVER ==================== */
 .cta-content {
   position: relative;
   z-index: 2;
@@ -42,6 +44,7 @@
   color: var(--white);
 }
 
+/* BADGE - ima samo pulse animaciju, nije hover */
 .cta-badge {
   display: inline-block;
   background: var(--primary-gold);
@@ -83,7 +86,7 @@
 }
 
 .cta-description {
-  font-size: 1.0625rem;
+  font-size: var(--font-size-large);
   font-weight: 300;
   line-height: 1.65;
   color: rgba(255, 255, 255, 0.95);
@@ -98,9 +101,10 @@
   font-weight: 600;
 }
 
+/* ==================== BUTTONS - IMA HOVER (nasljeđeno od App.css) ==================== */
 .cta-buttons {
   display: flex;
-  gap: 1rem;
+  gap: var(--card-gap);
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -108,7 +112,7 @@
 
 .cta-buttons .btn {
   padding: 0.875rem 2.5rem;
-  font-size: 0.9375rem;
+  font-size: var(--font-size-body);
 }
 
 /* ==================== RESPONSIVE ==================== */
@@ -122,7 +126,7 @@
   }
 
   .cta-description {
-    font-size: 1rem;
+    font-size: var(--font-size-body);
   }
 }
 
@@ -136,12 +140,12 @@
   }
 
   .cta-description {
-    font-size: 0.9375rem;
+    font-size: var(--font-size-body);
   }
 
   .cta-buttons {
     flex-direction: column;
-    gap: 0.875rem;
+    gap: 1rem;
   }
 
   .cta-buttons .btn {
@@ -165,6 +169,6 @@
   }
 
   .cta-description {
-    font-size: 0.875rem;
+    font-size: var(--font-size-small);
   }
 }

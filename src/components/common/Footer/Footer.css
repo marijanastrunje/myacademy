@@ -21,6 +21,7 @@
   );
 }
 
+/* ==================== FOOTER MAIN ==================== */
 .footer-main {
   padding: 5rem 0 3rem;
 }
@@ -29,20 +30,16 @@
   margin-bottom: 0.5rem;
 }
 
+/* LOGO - NEMA HOVER, samo slika */
 .footer-logo {
   height: 140px;
   width: auto;
-  transition: opacity 0.3s ease;
   margin-left: 3rem;
 }
 
-.footer-logo:hover {
-  opacity: 0.9;
-}
-
 .footer-description {
-  font-size: 1rem;
-  line-height: 1.8;
+  font-size: var(--font-size-large);
+  line-height: 1.65;
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 2rem;
   max-width: 400px;
@@ -55,6 +52,7 @@
   justify-content: center;
 }
 
+/* SOCIAL LINKOVI - IMA HOVER jer su klikabilni */
 .footer-social-link {
   width: 45px;
   height: 45px;
@@ -62,7 +60,7 @@
   align-items: center;
   justify-content: center;
   color: var(--white);
-  transition: all 0.3s ease;
+  transition: all var(--transition-speed) ease;
   font-size: 1.125rem;
 }
 
@@ -73,6 +71,7 @@
   transform: translateY(-5px);
 }
 
+/* ==================== FOOTER SECTIONS - NEMA HOVER ==================== */
 .footer-section {
   margin-bottom: 2rem;
 }
@@ -97,6 +96,7 @@
   background: var(--primary-gold);
 }
 
+/* ==================== FOOTER LINKS - IMA HOVER ==================== */
 .footer-links {
   list-style: none;
   padding: 0;
@@ -110,8 +110,8 @@
 .footer-links a {
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
-  font-size: 1rem;
-  transition: all 0.3s ease;
+  font-size: var(--font-size-large);
+  transition: all var(--transition-speed) ease;
   display: inline-block;
   position: relative;
   padding-left: 0;
@@ -122,7 +122,7 @@
   position: absolute;
   left: -20px;
   opacity: 0;
-  transition: all 0.3s ease;
+  transition: all var(--transition-speed) ease;
   color: var(--primary-gold);
 }
 
@@ -136,6 +136,7 @@
   opacity: 1;
 }
 
+/* ==================== CONTACT INFO - LINKOVI IMA HOVER ==================== */
 .footer-contact-item {
   display: flex;
   align-items: center;
@@ -144,6 +145,7 @@
   color: rgba(255, 255, 255, 0.8);
 }
 
+/* IKONE - NEMA HOVER, samo vizualni element */
 .footer-contact-icon {
   width: 40px;
   height: 40px;
@@ -160,7 +162,7 @@
 .footer-contact-info a {
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color var(--transition-speed) ease;
 }
 
 .footer-contact-info a:hover {
@@ -171,9 +173,10 @@
   font-weight: 600;
   color: var(--white);
   margin-bottom: 0.25rem;
-  font-size: 0.9375rem;
+  font-size: var(--font-size-body);
 }
 
+/* ==================== NEWSLETTER ==================== */
 .footer-newsletter {
   margin-top: 2rem;
   padding-top: 2rem;
@@ -183,7 +186,7 @@
 .footer-newsletter p {
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 1rem;
-  font-size: 0.9375rem;
+  font-size: var(--font-size-body);
 }
 
 .newsletter-form {
@@ -192,14 +195,15 @@
   gap: 0.75rem;
 }
 
+/* INPUT - ima focus stil, ne hover */
 .newsletter-input {
   width: 100%;
   padding: 0.875rem 1.25rem;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(201, 169, 97, 0.3);
   color: var(--white);
-  font-size: 0.9375rem;
-  transition: all 0.3s ease;
+  font-size: var(--font-size-body);
+  transition: all var(--transition-speed) ease;
 }
 
 .newsletter-input::placeholder {
@@ -212,6 +216,7 @@
   border-color: var(--primary-gold);
 }
 
+/* BUTTON - IMA HOVER jer je klikabilan */
 .newsletter-btn {
   width: 100%;
   padding: 0.875rem 2rem;
@@ -222,8 +227,8 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 0.875rem;
+  transition: all var(--transition-speed) ease;
+  font-size: var(--font-size-small);
 }
 
 .newsletter-btn:hover {
@@ -232,6 +237,19 @@
   box-shadow: 0 4px 15px rgba(201, 169, 97, 0.3);
 }
 
+.newsletter-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.newsletter-success {
+  color: #27ae60;
+  font-size: var(--font-size-small);
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+/* ==================== FOOTER BOTTOM ==================== */
 .footer-bottom {
   padding: 2rem 0;
   border-top: 1px solid rgba(201, 169, 97, 0.2);
@@ -246,10 +264,11 @@
 
 .footer-copyright {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 0.9375rem;
+  font-size: var(--font-size-body);
   margin: 0;
 }
 
+/* LEGAL LINKOVI - IMA HOVER jer su klikabilni */
 .footer-legal-links {
   display: flex;
   gap: 2rem;
@@ -261,12 +280,29 @@
 .footer-legal-links a {
   color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
-  font-size: 0.9375rem;
-  transition: color 0.3s ease;
+  font-size: var(--font-size-body);
+  transition: color var(--transition-speed) ease;
 }
 
 .footer-legal-links a:hover {
   color: var(--primary-gold);
+}
+
+/* ==================== UTILITIES ==================== */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+footer address {
+  font-style: normal;
 }
 
 /* ==================== RESPONSIVE ==================== */
@@ -308,7 +344,6 @@
     padding: 3rem 0 2rem;
   }
 
-  /* Centriranje logo i branda */
   .footer-brand {
     text-align: center;
   }
@@ -323,13 +358,12 @@
 
   .footer-description {
     max-width: 100%;
-    font-size: 0.9375rem;
+    font-size: var(--font-size-body);
     text-align: center;
     margin-left: auto;
     margin-right: auto;
   }
 
-  /* Centriranje sekcija */
   .footer-section {
     text-align: center;
   }
@@ -344,7 +378,6 @@
     transform: translateX(-50%);
   }
 
-  /* Centriranje linkova */
   .footer-links {
     text-align: center;
   }
@@ -357,7 +390,6 @@
     padding-left: 0;
   }
 
-  /* Centriranje kontakt informacija */
   .footer-contact-item {
     justify-content: flex-start;
     text-align: left;
@@ -366,7 +398,6 @@
     margin-right: auto;
   }
 
-  /* Centriranje newsletter sekcije */
   .footer-newsletter {
     text-align: center;
   }
@@ -377,7 +408,7 @@
 
   .footer-bottom-content {
     flex-direction: column;
-    gap: 1.5rem;
+    gap: var(--card-gap);
     text-align: center;
   }
 
@@ -399,7 +430,7 @@
   .newsletter-input,
   .newsletter-btn {
     padding: 0.75rem 1rem;
-    font-size: 0.875rem;
+    font-size: var(--font-size-small);
   }
 }
 
@@ -422,12 +453,12 @@
   }
 
   .footer-description {
-    font-size: 0.875rem;
+    font-size: var(--font-size-small);
     line-height: 1.6;
   }
 
   .footer-links a {
-    font-size: 0.9375rem;
+    font-size: var(--font-size-body);
   }
 
   .footer-contact-item {
@@ -437,12 +468,12 @@
   .footer-contact-icon {
     width: 35px;
     height: 35px;
-    font-size: 0.9375rem;
+    font-size: var(--font-size-body);
   }
 
   .footer-contact-label,
   .footer-contact-info {
-    font-size: 0.875rem;
+    font-size: var(--font-size-small);
   }
 
   .footer-newsletter {
@@ -451,7 +482,7 @@
   }
 
   .footer-newsletter p {
-    font-size: 0.875rem;
+    font-size: var(--font-size-small);
   }
 
   .footer-bottom {
@@ -460,39 +491,11 @@
 
   .footer-copyright,
   .footer-legal-links a {
-    font-size: 0.875rem;
+    font-size: var(--font-size-small);
   }
 
   .footer-social-link {
     width: 38px;
     height: 38px;
   }
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
-
-.newsletter-btn:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-.newsletter-success {
-  color: #27ae60;
-  font-size: 0.875rem;
-  margin-top: 0.5rem;
-  font-weight: 600;
-}
-
-footer address {
-  font-style: normal;
 }

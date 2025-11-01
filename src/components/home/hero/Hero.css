@@ -48,6 +48,7 @@
   padding: 2rem;
 }
 
+/* NEMA HOVER - logo je samo statična slika */
 .hero-logo-wrapper {
   margin-bottom: 2rem;
   animation: fadeIn 0.8s ease-out;
@@ -69,7 +70,7 @@
 
 .hero-subtitle {
   font-family: "Lato", sans-serif;
-  font-size: 1rem;
+  font-size: var(--font-size-body);
   font-weight: 400;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -99,7 +100,7 @@
 .hero-description {
   font-size: 1.25rem;
   font-weight: 300;
-  line-height: 1.8;
+  line-height: 1.65;
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 3rem;
   max-width: 700px;
@@ -110,7 +111,7 @@
 
 .hero-buttons {
   display: flex;
-  gap: 1.5rem;
+  gap: var(--card-gap);
   justify-content: center;
   align-items: center;
   animation: fadeInUp 0.8s ease-out 0.8s both;
@@ -182,7 +183,7 @@
   }
 
   .hero-description {
-    font-size: 1.125rem;
+    font-size: var(--font-size-large);
   }
 
   .hero-buttons {
@@ -206,12 +207,12 @@
   }
 
   .hero-subtitle {
-    font-size: 0.875rem;
+    font-size: var(--font-size-small);
     letter-spacing: 3px;
   }
 
   .hero-description {
-    font-size: 1rem;
+    font-size: var(--font-size-body);
   }
 
   .hero-logo {
