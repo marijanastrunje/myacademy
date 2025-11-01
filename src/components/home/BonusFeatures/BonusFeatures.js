@@ -66,7 +66,7 @@ const BonusFeatures = () => {
 
   return (
     <section
-      className="bonus-features-section section-padding"
+      className="bonus-features-section"
       id="bonuses"
       aria-labelledby="bonus-heading"
     >
@@ -113,7 +113,6 @@ const BonusFeatures = () => {
             ))}
           </div>
 
-          <h3>Ovo nije samo tečaj - ovo je investicija u tvoju budućnost</h3>
           <p>
             Svi bonusi, resursi i podrška su uključeni u cijenu programa. Nema
             skrivenih troškova. Dobivaš sve što ti treba za uspješan start i
