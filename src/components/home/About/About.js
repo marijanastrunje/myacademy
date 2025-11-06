@@ -76,7 +76,7 @@ const About = () => {
           <h3>Spremna da promijeniš svoj život?</h3>
           <p>
             Svaki dan odgađanja je dan manje na jahtama tvojih snova. Mjesta su
-            ograničena. Prvi termin je 30. listopada. Prijavi se.
+            ograničena. Prvi termin je 24. studenog. Prijavi se.
           </p>
           <nav className="about-cta-buttons" aria-label="Akcije">
             <a

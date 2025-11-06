@@ -6,24 +6,24 @@ import "./Testimonials.css";
 const Testimonials = () => {
   const testimonials = [
     {
-      text: "Program je nadmašio sva moja očekivanja! Marina i Marijana su nevjerojatne - njihovo iskustvo i strast prema poslu su me potpuno inspirirali. Nakon tečaja sam odmah dobila posao na luksuznom katamaranu.",
-      author: "Ana Marić",
-      role: "Hostesa, Sunreef 60",
-      avatar: "https://i.pravatar.cc/150?img=1",
+      text: "Marina i Marijana su bile izuzetne! Njihova profesionalnost i pažnja prema detaljima su učinile naš charter nezaboravnim. Svaki obrok je bio savršeno poslužen, a atmosfera koju su stvorile bila je topla i prijateljska.",
+      author: "James Mitchell",
+      role: "Gost, Charter Split 2023",
+      avatar: "https://i.pravatar.cc/150?img=12",
       rating: 5,
     },
     {
-      text: "Najbolja investicija u moju karijeru! Naučila sam sve od fine dining tehnike do wine pairinga. Praktične vježbe su bile ključne - osjećala sam se spremnom od prvog dana na jahti.",
-      author: "Petra Kovač",
-      role: "Hostesa, Lagoon 52",
-      avatar: "https://i.pravatar.cc/150?img=5",
+      text: "Najbolja hostesa s kojom smo imali zadovoljstvo ploviti! Od jutarnje kave do večernje wine selection - sve je bilo besprijekorno. Njezino poznavanje vina i fine dining protokola je na vrhunskoj razini.",
+      author: "Sophie Laurent",
+      role: "Gost, Charter Dalmacija 2024",
+      avatar: "https://i.pravatar.cc/150?img=32",
       rating: 5,
     },
     {
-      text: "Atmosfera na tečaju je bila izuzetna. Sve je bilo profesionalno organizirano, a materijali koje smo dobili su mi i dalje vrhunska referenca. Preporučujem svima koje žele ozbiljnu karijeru u charter industriji!",
-      author: "Lucija Novak",
-      role: "Hostesa, Bali 4.3",
-      avatar: "https://i.pravatar.cc/150?img=9",
+      text: "Rijetko viđam takvu kombinaciju profesionalnosti i topline. Marina je pretvorila naš obiteljski odmor u luksuzno iskustvo koje ćemo pamtiti cijeli život. Svaka preporuka!",
+      author: "Andreas Weber",
+      role: "Gost, Charter Kornati 2023",
+      avatar: "https://i.pravatar.cc/150?img=33",
       rating: 5,
     },
   ];

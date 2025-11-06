@@ -68,7 +68,7 @@ const Programs = () => {
       subtitle: "Za jahte 40m+ i Sunreef 60+ (bez kuhanja)",
       duration: "7 Dana",
       format: "Praksa",
-      availableDates: "30. listopada i 11. studenog 2025",
+      availableDates: "24. studenog 2025",
       image:
         "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=800&q=80",
       description:
@@ -84,7 +84,7 @@ const Programs = () => {
       ],
       price: "1.495",
       originalPrice: "1.795",
-      discount: "Launch cijena vrijedi samo za 30.10.2025.",
+      discount: "Launch cijena vrijedi samo za 24.11.2025.",
       cta: "Osiguraj mjesto",
     },
     {
@@ -96,7 +96,7 @@ const Programs = () => {
       subtitle: "Za katamarane i jahte do 40m (sa kuhanjem)",
       duration: "7 Dana",
       format: "Praksa",
-      availableDates: "30. listopada i 11. studenog 2025",
+      availableDates: "24. studenog 2025",
       image:
         "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=800&q=80",
       description:
@@ -112,7 +112,7 @@ const Programs = () => {
       ],
       price: "1.595",
       originalPrice: "1.895",
-      discount: "Launch cijena vrijedi samo za 30.10.2025.",
+      discount: "Launch cijena vrijedi samo za 24.11.2025.",
       cta: "Osiguraj Mjesto",
     },
   ];
@@ -147,7 +147,7 @@ const Programs = () => {
 
         <div className="launch-alert" role="alert" aria-live="polite">
           <div className="launch-badge" aria-hidden="true">
-            Launch ponuda - 30.10. 2025
+            Launch ponuda - 24.11. 2025
           </div>
           <h3>Postani dio prve službene generacije - 1.495€</h3>
           <p style={{ marginBottom: "1rem" }}>
@@ -165,7 +165,7 @@ const Programs = () => {
             Zadnja prilika za praktičnu obuku ove godine!
           </p>
           <p style={{ marginTop: "1rem", marginBottom: "0" }}>
-            <strong>Dostupni termini:</strong> 30. listopada • 11. studenog 2025
+            <strong>Dostupni termini:</strong> 24. studenog 2025
             <br />
             Maksimalno 8 polaznika po programu
           </p>

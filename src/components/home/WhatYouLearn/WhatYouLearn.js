@@ -16,12 +16,12 @@ const WhatYouLearn = () => {
   const learningPoints = [
     {
       icon: faUtensils,
-      title: "Fine Dining",
+      title: "Fine dining",
       description: "Napredne tehnike kuhanja i plating za VIP goste.",
     },
     {
       icon: faWineGlass,
-      title: "Wine Pairing",
+      title: "Wine pairing",
       description: "Stručno uparivanje vina s jelima.",
     },
     {
@@ -31,7 +31,7 @@ const WhatYouLearn = () => {
     },
     {
       icon: faUserTie,
-      title: "VIP Servis",
+      title: "VIP servis",
       description: "Vrhunski protokol i etiketa.",
     },
     {
@@ -46,12 +46,12 @@ const WhatYouLearn = () => {
     },
     {
       icon: faShip,
-      title: "Deck Obaveze",
+      title: "Deck obaveze",
       description: "Sigurnost i suradnja na palubi.",
     },
     {
       icon: faCheckCircle,
-      title: "Soft Skills",
+      title: "Soft skills",
       description: "Komunikacija i leadership vještine.",
     },
   ];

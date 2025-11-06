@@ -9,6 +9,7 @@ const Contact = () => {
     phone: "",
     program: "",
     message: "",
+    discountCode: "", // DODANO
   });
 
   const [formStatus, setFormStatus] = useState(""); // 'loading', 'success', 'error'
@@ -41,6 +42,7 @@ const Contact = () => {
             phone: "",
             program: "",
             message: "",
+            discountCode: "", // DODANO
           });
         },
         (error) => {
@@ -185,6 +187,25 @@ const Contact = () => {
                 aria-describedby="message-help"
               ></textarea>
               <small id="message-help" className="visually-hidden">
+                Ovo polje nije obavezno
+              </small>
+            </div>
+
+            <div className="form-group">
+              <label className="form-label" htmlFor="discount-code">
+                Kod za popust
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                id="discount-code"
+                name="discountCode"
+                value={formData.discountCode}
+                onChange={handleChange}
+                placeholder="Upiši kod za popust (opcionalno)"
+                aria-describedby="discount-help"
+              />
+              <small id="discount-help" className="visually-hidden">
                 Ovo polje nije obavezno
               </small>
             </div>

@@ -51,10 +51,10 @@ const BonusFeatures = () => {
     },
     {
       icon: faUserGraduate,
-      title: "Certifikat i preporuke",
+      title: "Preporuke",
       description:
-        "Službeni certifikat MY Academy i pisane preporuke od instruktorica s preko 7 godina iskustva u industriji. Potvrda tvoje stručnosti koju poslodavci cijene.",
-      highlight: "Priznata kvalifikacija",
+        "Pisane preporuke od instruktorica s preko 7 godina iskustva u industriji. Potvrda tvoje stručnosti koju poslodavci cijene.",
+      highlight: "Pisane preporuke",
     },
   ];
 

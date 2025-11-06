@@ -23,7 +23,7 @@ const Success = () => {
             <div className="video-wrapper">
               <div className="video-container">
                 <iframe
-                  src="https://www.youtube.com/embed/g4-tTNgdrPc"
+                  src="https://www.youtube.com/embed/RHTrKIAbDjI?si=Wq3D0o6LHPk0sVoF"
                   title="Kako smo uspjele - MY Academy priča"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
