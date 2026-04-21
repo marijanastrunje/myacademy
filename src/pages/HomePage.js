@@ -5,6 +5,7 @@ import Hero from "../components/home/hero/Hero";
 import Success from "../components/home/Success/Success";
 import WhatYouLearn from "../components/home/WhatYouLearn/WhatYouLearn";
 import Programs from "../components/home/Programs/Programs";
+import Modules from "../components/home/Modules/Modules";
 import BonusFeatures from "../components/home/BonusFeatures/BonusFeatures";
 import About from "../components/home/About/About";
 import Instructors from "../components/home/Instructors/Instructors";
@@ -22,6 +23,7 @@ const HomePage = () => {
         <WhatYouLearn />
         <Programs />
         <BonusFeatures />
+        <Modules />
         <About />
         <Instructors />
         <Testimonials />
